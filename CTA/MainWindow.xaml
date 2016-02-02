@@ -1,0 +1,67 @@
+﻿<Window x:Name="window_Main" x:Class="CTA.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="CTA" Height="498.5" Width="658.275" ResizeMode="NoResize">
+    <Grid Background="#FFC7C7C7">
+        <StatusBar Margin="0,0,0,-1" Height="29" VerticalAlignment="Bottom">
+            <Label x:Name="lbl_info" Content="Information:" Height="29" VerticalAlignment="Top" HorizontalAlignment="Left" TextOptions.TextFormattingMode="Display" FontSize="11" Width="538"/>
+        </StatusBar>
+        <TabControl x:Name="tbcontrol" HorizontalAlignment="Left" Height="400" VerticalAlignment="Top" Width="642" SelectedIndex="0" TabStripPlacement="Left" Margin="0,23,0,0">
+            <TabItem x:Name="tbItem_connection" Header="Connection">
+                <Grid Background="#FFE5E5E5">
+                    <Label Content="Domain" HorizontalAlignment="Right" Margin="0,34,200,0" VerticalAlignment="Top" Width="60" RenderTransformOrigin="0.469,0.5"/>
+                    <ComboBox x:Name="cmbx_domain" HorizontalAlignment="Right" Margin="0,34,25,0" VerticalAlignment="Top" Width="128" SelectedIndex="0" TabIndex="0">
+                        <ComboBoxItem Content="bin.bank"/>
+                    </ComboBox>
+                    <Label x:Name="lbl_username" Content="Username" HorizontalAlignment="Right" Margin="0,65,197,0" VerticalAlignment="Top"/>
+                    <Label x:Name="lbl_password" Content="Password" HorizontalAlignment="Right" Margin="0,93,200,0" VerticalAlignment="Top"/>
+                    <TextBox x:Name="txb_username" HorizontalAlignment="Right" Height="23" Margin="0,65,52,0" TextWrapping="Wrap" Text="username" VerticalAlignment="Top" Width="101" TabIndex="1"/>
+                    <PasswordBox x:Name="pbx_password" HorizontalAlignment="Right" Margin="0,99,52,0" VerticalAlignment="Top" Width="101" TabIndex="2"/>
+                    <Button x:Name="btn_connect" Content="&gt;&gt;" HorizontalAlignment="Right" Margin="0,65,25,0" VerticalAlignment="Top" Width="22" Height="54" Click="btn_connect_Click" FontWeight="Bold" TabIndex="3" RenderTransformOrigin="1.909,0.519"/>
+                    <Image x:Name="img_domainLogo" Margin="0,132,0,0" Stretch="Fill" Source="cta.ico"/>
+                    <GroupBox Header="Fast Switch Connection" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="117" Width="249">
+                        <ComboBox Margin="10,10,10,0" VerticalAlignment="Top" Height="31" FontSize="14" FontWeight="Bold" FontStyle="Italic"/>
+                    </GroupBox>
+                    <Label Content="Status" HorizontalAlignment="Left" Margin="25,83,0,0" VerticalAlignment="Top"/>
+                    <GroupBox Header="GroupBox" HorizontalAlignment="Left" Margin="264,10,0,0" VerticalAlignment="Top" Height="117" Width="281"/>
+                </Grid>
+            </TabItem>
+            <TabItem x:Name="tbItem_User" Header="User">
+                <Grid Background="#FFE5E5E5"/>
+            </TabItem>
+            <TabItem x:Name="tbItem_Workstation" Header="Workstaion">
+                <Grid Background="#FFE5E5E5">
+                    <Button x:Name="btn_search" Content="Generate Free Name" Margin="0,37,10,0" VerticalAlignment="Top" Click="btn_search_Click" BorderBrush="#FFB60C0C" FontWeight="Bold" Foreground="#FFB0B022" HorizontalAlignment="Right" Width="266" TabIndex="5">
+                        <Button.Background>
+                            <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                                <GradientStop Color="#FFF3F3F3" Offset="0"/>
+                                <GradientStop Color="#FF555050" Offset="0.477"/>
+                            </LinearGradientBrush>
+                        </Button.Background>
+                    </Button>
+                    <Button x:Name="btn_createPC" Content="Create" HorizontalAlignment="Right" Margin="0,216,10,0" VerticalAlignment="Top" Width="75" Click="btn_createPC_Click" FontWeight="Bold" TabIndex="7"/>
+                    <ComboBox x:Name="cmbx_StartIndex" HorizontalAlignment="Right" Margin="0,10,10,0" VerticalAlignment="Top" Width="138" IsReadOnly="True" SelectedIndex="0" TabIndex="4">
+                        <ComboBoxItem Content="First free in MOS"/>
+                        <ComboBoxItem Content="Start from MOS-1000"/>
+                        <ComboBoxItem Content="Start from MOS-2000"/>
+                        <ComboBoxItem Content="Start from MOS-3000"/>
+                        <ComboBoxItem Content="Start from MOS-4000"/>
+                        <ComboBoxItem Content="Start from MOS-5000"/>
+                    </ComboBox>
+                    <GroupBox Header="BIN BRANCHES" HorizontalAlignment="Left" Margin="3,7,0,10" Width="213">
+                        <TreeView x:Name="tr_view" SelectedItemChanged="tr_view_SelectedItemChanged" Background="{x:Null}" Margin="4,0,-2,2" BorderBrush="{x:Null}" FontSize="16"/>
+                    </GroupBox>
+                    <Label Content="Search Options" HorizontalAlignment="Right" Margin="0,10,185,0" VerticalAlignment="Top" RenderTransformOrigin="0.368,-0.346"/>
+                    <CheckBox x:Name="ckbx_description" Content="With Description" HorizontalAlignment="Right" Margin="0,195,10,0" VerticalAlignment="Top" TabIndex="6"/>
+                    <GroupBox Header="Free Name" Margin="0,0,10,10" Height="110" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="266">
+                        <Label x:Name="lbl_freePC" Content="MOS-1111" Margin="-6" FontSize="45" FontWeight="Bold" TextOptions.TextHintingMode="Animated" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                    </GroupBox>
+                </Grid>
+            </TabItem>
+        </TabControl>
+        <Menu Height="23" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.568">
+            <MenuItem Header="Menu" Click="MenuItem_Click"/>
+            <MenuItem x:Name="menuItem_FSC" Header="Fast Switch Connection" Click="menuItem_FSC_Click"/>
+        </Menu>
+    </Grid>
+</Window>

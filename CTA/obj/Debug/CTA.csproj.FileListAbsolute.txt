@@ -1,0 +1,15 @@
+C:\Users\kozlov_mg\Documents\Visual Studio 2013\Projects\bandwidth_meter\CTA\bin\Debug\CTA.exe.config
+C:\Users\kozlov_mg\Documents\Visual Studio 2013\Projects\bandwidth_meter\CTA\bin\Debug\CTA.exe
+C:\Users\kozlov_mg\Documents\Visual Studio 2013\Projects\bandwidth_meter\CTA\bin\Debug\CTA.pdb
+C:\Users\kozlov_mg\Documents\Visual Studio 2013\Projects\bandwidth_meter\CTA\obj\Debug\MainWindow.baml
+C:\Users\kozlov_mg\Documents\Visual Studio 2013\Projects\bandwidth_meter\CTA\obj\Debug\MainWindow.g.cs
+C:\Users\kozlov_mg\Documents\Visual Studio 2013\Projects\bandwidth_meter\CTA\obj\Debug\App.g.cs
+C:\Users\kozlov_mg\Documents\Visual Studio 2013\Projects\bandwidth_meter\CTA\obj\Debug\CTA_MarkupCompile.cache
+C:\Users\kozlov_mg\Documents\Visual Studio 2013\Projects\bandwidth_meter\CTA\obj\Debug\CTA.g.resources
+C:\Users\kozlov_mg\Documents\Visual Studio 2013\Projects\bandwidth_meter\CTA\obj\Debug\CTA.Properties.Resources.resources
+C:\Users\kozlov_mg\Documents\Visual Studio 2013\Projects\bandwidth_meter\CTA\obj\Debug\CTA.csproj.GenerateResource.Cache
+C:\Users\kozlov_mg\Documents\Visual Studio 2013\Projects\bandwidth_meter\CTA\obj\Debug\CTA.exe
+C:\Users\kozlov_mg\Documents\Visual Studio 2013\Projects\bandwidth_meter\CTA\obj\Debug\CTA.pdb
+C:\Users\kozlov_mg\Documents\Visual Studio 2013\Projects\bandwidth_meter\CTA\obj\Debug\CTA.csprojResolveAssemblyReference.cache
+C:\Users\kozlov_mg\Documents\Visual Studio 2013\Projects\bandwidth_meter\CTA\obj\Debug\App.baml
+C:\Users\kozlov_mg\Documents\Visual Studio 2013\Projects\bandwidth_meter\CTA\obj\Debug\CTA.AboutBox1.resources
