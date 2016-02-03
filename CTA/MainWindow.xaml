@@ -20,7 +20,7 @@
                     <Button x:Name="btn_connect" Content="&gt;&gt;" HorizontalAlignment="Right" Margin="0,65,25,0" VerticalAlignment="Top" Width="22" Height="54" Click="btn_connect_Click" FontWeight="Bold" TabIndex="3" RenderTransformOrigin="1.909,0.519"/>
                     <Image x:Name="img_domainLogo" Margin="0,132,0,0" Stretch="Fill" Source="cta.ico"/>
                     <GroupBox Header="Fast Switch Connection" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="117" Width="249">
-                        <ComboBox Margin="10,10,10,0" VerticalAlignment="Top" Height="31" FontSize="14" FontWeight="Bold" FontStyle="Italic"/>
+                        <ComboBox x:Name="cmbx_FSC" Margin="10,10,10,0" VerticalAlignment="Top" Height="31" FontSize="14" FontWeight="Bold" FontStyle="Italic"/>
                     </GroupBox>
                     <Label Content="Status" HorizontalAlignment="Left" Margin="25,83,0,0" VerticalAlignment="Top"/>
                     <GroupBox Header="GroupBox" HorizontalAlignment="Left" Margin="264,10,0,0" VerticalAlignment="Top" Height="117" Width="281"/>
@@ -60,7 +60,7 @@
             </TabItem>
         </TabControl>
         <Menu Height="23" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.568">
-            <MenuItem Header="Menu" Click="MenuItem_Click"/>
+            <MenuItem Header="Menu"/>
             <MenuItem x:Name="menuItem_FSC" Header="Fast Switch Connection" Click="menuItem_FSC_Click"/>
         </Menu>
     </Grid>

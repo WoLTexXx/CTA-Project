@@ -1,19 +1,17 @@
-﻿<Window x:Name="FSCWindow1" x:Class="CTA.FSCWindow"
+﻿<Window x:Name="FSCWindow_Main" x:Class="CTA.FSCWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Fast Switch Connection" Height="185" Width="502" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" SizeToContent="WidthAndHeight">
+        Title="Fast Switch Connection" Height="185" Width="502" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" SizeToContent="WidthAndHeight" Closing="FSCWindow_Main_Closing">
     <Grid>
-        <ListBox HorizontalAlignment="Left" Margin="10,10,0,0" Width="211" Height="101" VerticalAlignment="Top" FontSize="18">
-            <ListBoxItem Background="#FFE6E1E1" FontSize="16"/>
-        </ListBox>
+        <ListBox x:Name="listbx_ADAccounts" HorizontalAlignment="Left" Margin="10,10,0,0" Width="211" Height="101" VerticalAlignment="Top" FontSize="18"/>
         <Button x:Name="btn_add_account" HorizontalAlignment="Left" Margin="415,116,0,0" VerticalAlignment="Top" Width="70" Height="29" IsCancel="True" Background="{x:Null}" Content="Add" Click="btn_add_account_Click"/>
         <Button x:Name="btn_del_account" HorizontalAlignment="Left" Margin="151,116,0,0" VerticalAlignment="Top" Width="70
-                " Height="29" IsCancel="True" Background="{x:Null}" Content="Del"/>
-        <TextBox x:Name="txb_domain" HorizontalAlignment="Left" Height="23" Margin="366,13,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="14" TabIndex="1"/>
+                " Height="29" IsCancel="True" Background="{x:Null}" Content="Del" Click="btn_del_account_Click"/>
+        <TextBox x:Name="txbx_domain" HorizontalAlignment="Left" Height="23" Margin="366,13,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="14" TabIndex="1"/>
         <Label Content="Domain" HorizontalAlignment="Left" Margin="280,10,0,0" VerticalAlignment="Top"/>
         <Label Content="Login" HorizontalAlignment="Left" Margin="280,41,0,0" VerticalAlignment="Top"/>
         <Label Content="Password" HorizontalAlignment="Left" Margin="280,72,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="txb_login" HorizontalAlignment="Left" Height="23" Margin="366,43,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="14" TabIndex="2"/>
+        <TextBox x:Name="txbx_login" HorizontalAlignment="Left" Height="23" Margin="366,43,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="14" TabIndex="2"/>
         <PasswordBox x:Name="pwbx_password" HorizontalAlignment="Left" Margin="366,75,0,0" VerticalAlignment="Top" Width="120" Height="23" FontSize="14" TabIndex="3" PasswordChar="●"/>
 
     </Grid>

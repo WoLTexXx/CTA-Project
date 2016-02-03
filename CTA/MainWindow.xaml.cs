@@ -37,10 +37,14 @@ namespace CTA
         delegate void DELEG();
         event DELEG ConnectionSuccess;
         event DELEG ConnectionClose;
+        FSCWindow _FSCWindow;
 
         public MainWindow()
         {
             InitializeComponent();
+
+            _FSCWindow.FSCWindowClosedEvent += UpdateFSCComboBox;
+            
 
             try
             {
@@ -301,8 +305,20 @@ namespace CTA
 
         private void menuItem_FSC_Click(object sender, RoutedEventArgs e)
         {
-            Window FSCWindow = new Window();
+            _FSCWindow = new FSCWindow();
             
+            _FSCWindow.Show();
+            
+        }
+        private void UpdateFSCComboBox()
+        {
+            cmbx_FSC.Items.Clear();
+            if (DomainManager.GetAllADAccounts().Count > 0)
+            {
+                foreach (var q in DomainManager.GetAllADAccounts())
+                    cmbx_FSC.Items.Add(q);
+            }
+
         }
     }
 }

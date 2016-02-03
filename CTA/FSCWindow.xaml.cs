@@ -19,14 +19,63 @@ namespace CTA
     /// </summary>
     public partial class FSCWindow : Window
     {
+        public delegate void FSCWindowClosedDelegate();
+        public event FSCWindowClosedDelegate FSCWindowClosedEvent;
+
         public FSCWindow()
         {
             InitializeComponent();
+            if (DomainManager.GetAllADAccounts().Count > 0)
+                UpdateListBoxValues();
+
         }
 
         private void btn_add_account_Click(object sender, RoutedEventArgs e)
         {
-            
+            string _login = txbx_login.Text.Trim();
+            string _pass = pwbx_password.Password.Trim();
+            string _domain = txbx_domain.Text.Trim();
+
+            if (_domain != "" && _login != "" && _pass != "")
+            {
+                DomainManager.AddAccount(_login, _pass, _domain);
+            }
+            listbx_ADAccounts.Items.Clear();
+            foreach (var q in DomainManager.GetAllADAccounts())
+                listbx_ADAccounts.Items.Add(q);
+
+            ClearFields();
+
         }
+
+        private void btn_del_account_Click(object sender, RoutedEventArgs e)
+        {
+            if (listbx_ADAccounts.SelectedIndex >= 0)
+                ;
+            //return DialogResult = "OK";
+            ClearFields();
+        }
+        public static void ShowMessage(string message, string caption = "Exception", MessageBoxButton messageBoxbutton = MessageBoxButton.OK,
+            MessageBoxImage messageBoxImage = MessageBoxImage.Information)
+        {
+            MessageBox.Show(message, caption, messageBoxbutton, messageBoxImage);
+        }
+        private void ClearFields()
+        {
+            txbx_domain.Text = "";
+            txbx_login.Text = "";
+            pwbx_password.Password = "";
+        }
+        private void UpdateListBoxValues()
+        {
+            foreach (var q in DomainManager.GetAllADAccounts())
+                listbx_ADAccounts.Items.Add(q);
+        }
+
+        private void FSCWindow_Main_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            FSCWindowClosedEvent();
+        }
+
     }
 }
